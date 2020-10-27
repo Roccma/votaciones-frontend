@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ILogin } from '../../interfaces/ILogin';
 import { IPostulante } from '../../interfaces/IPostulante';
+import { NotiflixService } from '../../services/notiflix.service';
+import { IVotacion } from '../../interfaces/IVotacion';
 
 @Component({
   selector: 'app-votacion-form',
@@ -24,19 +25,32 @@ export class VotacionFormComponent implements OnInit {
     }
   ];
 
-  voto:ILogin = {
+  voto:IVotacion = {
     documento: "",
     postulante: this.postulantes[0].id
   };
 
 
-  constructor() { }
+  constructor( private notiflixService: NotiflixService ) { 
+  }
 
   ngOnInit(): void {
   }
 
   votar( votoForm:NgForm ): void{
-    console.log( votoForm );
+    this.controlar( votoForm );
+  }
+
+  controlar( votoForm:NgForm ): void{
+    if( votoForm.form.controls.documento.errors && 
+      votoForm.form.controls.documento.errors['required'] ){
+      this.notiflixService.showAlert("El documento no puede estar vacío", "warning");
+      return;
+    }
+    if( votoForm.form.value.documento.length < 8 ){
+      this.notiflixService.showAlert("El documento ingresado es inválido", "warning");
+      return;
+    }
   }
 
 }

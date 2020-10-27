@@ -1,0 +1,15 @@
+<form autocomplete="off" (ngSubmit)="login( autenticacionForm )" #autenticacionForm="ngForm">
+    <div class="form-group">
+        <p class="col-form-label">Documento <span class="required-field">*</span></p>
+        <input type="text" placeholder="12345678" class="form-control" required name="documento" [ngModel]="usuario.documento" maxlength="8" />
+    </div>
+    <div class="form-group">
+        <p class="col-form-label">Contraseña <span class="required-field">*</span></p>
+        <input type="password" placeholder="*******" class="form-control" required name="contrasenia" [ngModel]="usuario.contrasenia" />
+    </div>
+    <div class="form-group mt-4">
+        <button type="submit" class="btn btn-outline-primary btn-block">
+            Aceptar
+        </button>
+    </div>
+</form>

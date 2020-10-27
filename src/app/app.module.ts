@@ -14,6 +14,10 @@ import { MasVotadosComponent } from './components/mas-votados/mas-votados.compon
 import { ListarVotosComponent } from './components/listar-votos/listar-votos.component';
 import { NuevaEntidadComponent } from './components/nueva-entidad/nueva-entidad.component';
 import { ModificarClaveComponent } from './components/modificar-clave/modificar-clave.component';
+import { AutenticacionFormComponent } from './components/autenticacion-form/autenticacion-form.component';
+import { AutenticacionModalComponent } from './components/autenticacion-modal/autenticacion-modal.component';
+
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -26,11 +30,14 @@ import { ModificarClaveComponent } from './components/modificar-clave/modificar-
     MasVotadosComponent,
     ListarVotosComponent,
     NuevaEntidadComponent,
-    ModificarClaveComponent
+    ModificarClaveComponent,
+    AutenticacionFormComponent,
+    AutenticacionModalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    RouterModule,
     routing
   ],
   providers: [],

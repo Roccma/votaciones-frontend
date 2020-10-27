@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ILogin } from '../../interfaces/ILogin';
 
 @Component({
   selector: 'app-votacion',

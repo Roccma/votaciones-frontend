@@ -6,3 +6,9 @@
     color: #777;
     font-size: 14px;
 }
+
+html,
+body {
+    background: url('assets/images/background.png');
+    height: 100%;
+}
