@@ -1,0 +1,20 @@
+<form autocomplete="off" (ngSubmit)="votar( votoForm )" #votoForm="ngForm">
+    <div class="form-group">
+        <p class="col-form-label">Documento <span class="required-field">*</span></p>
+        <p class="acclaration-text">(Sin puntos ni guion)</p>
+        <input type="text" placeholder="12345678" class="form-control" required name="documento" [ngModel]="voto.documento" maxlength="8" />
+    </div>
+    <div class="form-group">
+        <p class="col-form-label">Postulante</p>
+        <select class="form-control" name="postulante" [ngModel]="voto.postulante">
+            <option *ngFor="let postulante of postulantes" [value] = "postulante.id">
+                {{ postulante.nombre + " " + postulante.apellido }}
+            </option>
+        </select>
+    </div>
+    <div class="form-group mt-5">
+        <button type="submit" class="btn btn-outline-primary btn-block">
+            Votar
+        </button>
+    </div>
+</form>
