@@ -9,6 +9,11 @@ import { VotacionFormComponent } from './components/votacion-form/votacion-form.
 import { GestionLinkComponent } from './components/gestion-link/gestion-link.component';
 
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { MasVotadosComponent } from './components/mas-votados/mas-votados.component';
+import { ListarVotosComponent } from './components/listar-votos/listar-votos.component';
+import { NuevaEntidadComponent } from './components/nueva-entidad/nueva-entidad.component';
+import { ModificarClaveComponent } from './components/modificar-clave/modificar-clave.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { FormsModule } from '@angular/forms';
     VotacionComponent,
     GestionComponent,
     VotacionFormComponent,
-    GestionLinkComponent
+    GestionLinkComponent,
+    NavbarComponent,
+    MasVotadosComponent,
+    ListarVotosComponent,
+    NuevaEntidadComponent,
+    ModificarClaveComponent
   ],
   imports: [
     BrowserModule,
