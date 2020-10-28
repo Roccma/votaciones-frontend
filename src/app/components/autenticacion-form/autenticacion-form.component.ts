@@ -14,7 +14,7 @@ declare var $:any;
 export class AutenticacionFormComponent implements OnInit {
   
   usuario:ILogin = {
-    documento: '',
+    email: '',
     contrasenia: ''
   };
 
@@ -29,17 +29,12 @@ export class AutenticacionFormComponent implements OnInit {
       $('#modalAutenticacion').modal('hide');
       this.router.navigate(['/gestion']);
     }
-      
   }
 
   controlar( autenticacionForm:NgForm ): boolean{
-    if( autenticacionForm.form.controls.documento.errors && 
-      autenticacionForm.form.controls.documento.errors['required'] ){
+    if( autenticacionForm.form.controls.email.errors && 
+      autenticacionForm.form.controls.email.errors['required'] ){
       this.notiflixService.showAlert("El documento no puede estar vacío", "warning");
-      return false;
-    }
-    if( autenticacionForm.form.value.documento.length < 8 ){
-      this.notiflixService.showAlert("El documento ingresado es inválido", "warning");
       return false;
     }
     if( autenticacionForm.form.controls.contrasenia.errors && 
