@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   
+  @Input() nombre:string;
+  @Input() apellido:string;
+  @Input() documento:string;
+
   opcionesMenu:any[] = [
     {
-      title : 'Postulantes más votados',
+      title : 'Más votados',
       redirect_to : 'mas_votados',
       icon: 'fa fa-users'
     },

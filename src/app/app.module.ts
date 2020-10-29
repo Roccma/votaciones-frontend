@@ -20,6 +20,7 @@ import { AutenticacionFormComponent } from './components/autenticacion-form/aute
 import { AutenticacionModalComponent } from './components/autenticacion-modal/autenticacion-modal.component';
 
 import { RouterModule } from '@angular/router';
+import { DocumentoPipe } from './pipes/documento.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { RouterModule } from '@angular/router';
     NuevaEntidadComponent,
     ModificarClaveComponent,
     AutenticacionFormComponent,
-    AutenticacionModalComponent
+    AutenticacionModalComponent,
+    DocumentoPipe
   ],
   imports: [
     BrowserModule,

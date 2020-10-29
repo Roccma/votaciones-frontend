@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from '../../../environments/environment.prod';
 import { Router } from '@angular/router';
 import { StorageService } from '../../services/storage.service';
+import { IEntidad } from '../../interfaces/IEntidad';
 
 @Component({
   selector: 'app-gestion',
@@ -9,6 +10,8 @@ import { StorageService } from '../../services/storage.service';
   styleUrls: ['./gestion.component.css']
 })
 export class GestionComponent implements OnInit {
+
+  usuario:IEntidad = null;
 
   constructor( private router: Router,
               private storageService: StorageService ) { 
@@ -21,6 +24,9 @@ export class GestionComponent implements OnInit {
   controlarLogueo(){
     if( !this.storageService.getLogueado() ){
       this.router.navigate(['/votacion']);
+    }
+    else{
+      this.usuario = this.storageService.getLogueado();
     }
   }
 
