@@ -1,0 +1,19 @@
+<div class="mas-votados-listado-container" *ngIf="postulantes.length > 0; else loadingContent">
+    <app-votos-postulante-card *ngFor="let postulante of postulantes | paginate : paginacionConfig" [postulante]="postulante" [posicion]="getIndex(postulante.id) + 1"></app-votos-postulante-card>
+    <div class="cantidad-mostrar-container" *ngIf="postulantes.length > 0">
+        <span>Mostrar</span>&nbsp;
+        <select [(ngModel)]="paginacionConfig.itemsPerPage" id="cantidad-mostrar-select" class="form-control">
+            <option *ngFor="let cantidad of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" [value] = "cantidad" >
+                {{ cantidad }}
+            </option>
+            <option [value] = "postulantes.length">
+                Todos
+            </option>
+        </select>
+    </div>
+    <pagination-controls (pageChange)="paginacionConfig.currentPage = $event" previousLabel="Anterior" nextLabel="Siguiente" *ngIf="postulantes.length > 0"></pagination-controls>
+</div>
+<ng-template #loadingContent class="mas-votados-listado-container">
+    <ngx-skeleton margin="25px auto" width="50%" borderRadius="15px" height="135px" *ngFor="let item of actualizarRango()"></ngx-skeleton>
+    <ngx-skeleton height="50px" margin="45px auto" width="50%" borderRadius="15px"></ngx-skeleton>
+</ng-template>

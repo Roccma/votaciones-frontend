@@ -43,7 +43,7 @@ export class AutenticacionFormComponent implements OnInit {
         this.storageService.loguear( login['usuario'] );
         this.notiflixService.hideLoading();
         $('#modalAutenticacion').modal('hide');
-        this.router.navigate(['/gestion']);
+        this.router.navigate(['/gestion', 'mas_votados']);
       }
     }
   }

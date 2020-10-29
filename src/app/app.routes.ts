@@ -15,7 +15,7 @@ const routes: Routes = [
             { path: 'listar_votos', component: ListarVotosComponent },
             { path: 'modificar_clave', component: ModificarClaveComponent },
             { path: 'nueva_entidad', component: NuevaEntidadComponent },
-            { path: '**', component: MasVotadosComponent }
+            { path: '**', redirectTo: 'mas_votados' }
         ]
     },
     { path: '**', component: VotacionComponent },

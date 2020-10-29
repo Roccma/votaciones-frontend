@@ -1,0 +1,22 @@
+<div class="postulante-card">
+    <div class="postulante-icon-container">
+        <i class="fa fa-user"></i>
+    </div>
+    <div class="postulante-informacion-container">
+        <label class="postulante-nombre">{{ postulante.nombre + " " + postulante.apellido }}
+        <br>
+        <span class="acclaration-text">{{ postulante.documento | documento }}</span>
+        </label>
+        <label><span class = "ranking-posicion">#{{ posicion }}</span> en el ranking</label>
+    </div>
+    <div class="postulante-votos-container">
+        <div class="postulante-votos-icon">
+            <i class="fa fa-vote-yea"></i>
+        </div>
+        <div class="postulante-votos-cantidad">
+            {{ postulante.votos }}
+            <span *ngIf="postulante.votos != 1">votos</span>
+            <span *ngIf="postulante.votos == 1">voto</span>
+        </div>
+    </div>
+</div>

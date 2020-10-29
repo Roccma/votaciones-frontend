@@ -22,6 +22,8 @@
     "angular-md5": "^0.1.10",
     "crypto-js": "^4.0.0",
     "crypto-ts": "^1.0.2",
+    "ngx-pagination": "^5.0.0",
+    "ngx-skeleton": "^1.0.0",
     "notiflix-angular": "^1.1.0",
     "rxjs": "~6.6.0",
     "sweetalert2": "^10.8.1",

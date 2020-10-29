@@ -51,4 +51,11 @@ export class VotacionesApiService {
 
     return this.http.post(url, body).toPromise();
   }
+
+  getRanking(){
+    let url = `${ environment.api_base_url }/entidades/ranking`;
+
+    return this.http.get( url )
+      .pipe( map( ( data: any ) => data['postulantes'] ) );
+  }
 }

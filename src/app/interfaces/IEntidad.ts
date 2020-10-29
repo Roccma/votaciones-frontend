@@ -7,6 +7,7 @@ export interface IEntidad{
     telefono: string;
     dob: string;
     sexo: string;
+    votos?: number;
     es_postulante?: boolean;
     clave?: string;
 }
