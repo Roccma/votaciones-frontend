@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from '../../services/storage.service';
 
 @Component({
   selector: 'app-votacion',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VotacionComponent implements OnInit {
  
-  constructor() { }
+  constructor( private storageService: StorageService ) { }
 
   ngOnInit(): void {
+    this.storageService.desloguear();
   }
 
 }

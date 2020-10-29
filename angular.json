@@ -27,7 +27,9 @@
                             "src/styles.css",
                             "./node_modules/notiflix-angular/dist/notiflix-angular-1.1.0.css"
                         ],
-                        "scripts": []
+                        "scripts": [
+                            "./node_modules/crypto-ts/esm5/crypto-ts.js"
+                        ]
                     },
                     "configurations": {
                         "production": {

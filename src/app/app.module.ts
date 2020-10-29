@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { VotacionComponent } from './pages/votacion/votacion.component';
 import { GestionComponent } from './pages/gestion/gestion.component';
@@ -38,6 +40,7 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     FormsModule,
     RouterModule,
+    HttpClientModule,
     routing
   ],
   providers: [],

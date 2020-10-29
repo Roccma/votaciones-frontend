@@ -16,6 +16,17 @@ export class NotiflixService {
       distance: '15px',
       fontSize: '18px'
     });
+
+    Notiflix.Loading.Init({
+      svgColor: '#007bff',
+      messageFontSize: '18px'
+    });
+
+    Notiflix.Report.Init({
+      titleFontSize: '22px',
+      messageFontSize: '18px',
+      buttonFontSize: '18px'
+    });
   }
 
   showAlert( message: string, type = 'success' ): void{
@@ -33,5 +44,20 @@ export class NotiflixService {
         Notiflix.Notify.Success( message );
         break;
     }
+  }
+
+  showLoading( message: string ): void{
+    Notiflix.Loading.Pulse( message );
+  }
+
+  hideLoading(){
+    Notiflix.Loading.Remove();
+  }
+
+  showSuccess( title: string, message: string, button: string ){
+    Notiflix.Report.Success(
+      title,
+      message,
+      button);
   }
 }
