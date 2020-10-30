@@ -1,27 +1,33 @@
-# VotacionesFrontend
+# Sistema para Gestión de Votaciones (Frontend)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+El proyecto contiene el frontend de un sistema para gestión de votos. En este, se puede emitir un voto por persona registrada en el mismo. Así como acceder al panel de gestión para observar resultados en tiempo real, listar votos y administrar personas (tanto crear nuevas, como cambiar contraseña al usuario propio).
 
-## Development server
+## Pre-requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- El proyecto es generado con Angular CLI versión 10.2.0. Por lo que se lo debe obtener desde el siguiente link: [Angular CLI](https://github.com/angular/angular-cli).
 
-## Code scaffolding
+- También es necesario tener instalado npm, para la instalación de paquetes externos. Para esto, instalar Node.JS desde aquí: [Nodejs][https://nodejs.org/es/]
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalacióm
 
-## Build
+- En primer lugar, se debe clonar el proyecto, por ejemplo (utilizando HTTPS) con la línea de comando:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+git clone https://github.com/Roccma/votaciones-frontend.git
+```
 
-## Running unit tests
+O bien, descargarlo y ubicarse con la consola dentro del directorio.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Una vez allí, ejecutar la instrucción:
 
-## Running end-to-end tests
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Cuando finalice la instalación de los anteriores paquetes, se procede a inicializar el servidor, para ello se corre la siguiente línea de comando (siempre ubicados dentro del directorio del proyecto):
 
-## Further help
+```bash
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Y listo, el proyecto se encontrará en funcionamiento bajo la URL `http://localhost:4200/`, pudiendo utilizarlo desde aquí.
