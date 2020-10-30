@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class EsPostulantePipe implements PipeTransform {
 
   transform(value: boolean): string {
-    return value === true ? "Sí" : "No";
+    return value === "1" ? "Sí" : "No";
   }
 
 }

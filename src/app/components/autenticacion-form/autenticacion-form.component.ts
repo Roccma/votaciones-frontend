@@ -5,7 +5,6 @@ import { NotiflixService } from '../../services/notiflix.service';
 import { Router } from '@angular/router';
 import sha256 from 'crypto-js/sha256';
 import { VotacionesApiService } from '../../services/votaciones-api.service';
-import { environment } from '../../../environments/environment.prod';
 import { StorageService } from '../../services/storage.service';
 
 declare var $:any;
@@ -45,6 +44,9 @@ export class AutenticacionFormComponent implements OnInit {
         $('#modalAutenticacion').modal('hide');
         this.router.navigate(['/gestion', 'mas_votados']);
       }
+    }
+    else{
+      this.notiflixService.hideLoading();
     }
   }
 
