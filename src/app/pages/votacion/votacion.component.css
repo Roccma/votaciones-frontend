@@ -4,6 +4,26 @@
     height: 100%;
 }
 
+.votacion-header {
+    color: #007bff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.votacion-header-title {
+    font-size: 38px;
+}
+
+.votacion-header-autor {
+    font-size: 28px;
+}
+
 .votacion-form-container {
     background: #FAFAFA;
     width: 50%;

@@ -14,7 +14,7 @@
     <pagination-controls (pageChange)="paginacionConfig.currentPage = $event" previousLabel="Anterior" nextLabel="Siguiente" *ngIf="votos.length > 0"></pagination-controls>
 </div>
 <ng-template #loadingContent class="mas-votados-listado-container">
-    <ngx-skeleton margin="25px auto" width="50%" borderRadius="15px" height="90px" *ngFor="let item of actualizarRango()"></ngx-skeleton>
-    <ngx-skeleton height="50px" margin="45px auto" width="50%" borderRadius="15px"></ngx-skeleton>
+    <ngx-skeleton margin="25px auto" width="60%" borderRadius="15px" height="90px" *ngFor="let item of actualizarRango()"></ngx-skeleton>
+    <ngx-skeleton height="50px" margin="45px auto" width="60%" borderRadius="15px"></ngx-skeleton>
 </ng-template>
 <app-voto-detalle-modal></app-voto-detalle-modal>
