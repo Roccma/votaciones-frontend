@@ -38,7 +38,6 @@ export class VotacionesApiService {
       id_entidad_postulante: idPostulante
     } );
 
-    
     let headers:HttpHeaders = new HttpHeaders({
       'Content-Type' : 'application/json'
     });
@@ -54,7 +53,6 @@ export class VotacionesApiService {
       clave
     } );
 
-    
     let headers:HttpHeaders = new HttpHeaders({
       'Content-Type' : 'application/json'
     });
