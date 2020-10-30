@@ -1,4 +1,4 @@
-<div class="listar-votos-listado-container" *ngIf="votos && votos.length > 0; else loadingContent">
+<div class="listar-votos-listado-container" *ngIf="votos && votos.length > 0 || !loading; else loadingContent">
     <app-voto-card *ngFor="let voto of votos | paginate : paginacionConfig" [voto]="voto"></app-voto-card>
     <div class="cantidad-mostrar-container" *ngIf="votos.length > 0">
         <span>Mostrar</span>&nbsp;

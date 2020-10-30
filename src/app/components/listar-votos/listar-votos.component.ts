@@ -14,9 +14,10 @@ export class ListarVotosComponent implements OnInit {
   maxVotos:number;
   ganadores: IEntidad[];
   votos: IVoto[];
+  loading: boolean;
 
   constructor( private votacionesApiService: VotacionesApiService ) { 
-    
+    this.loading = true;
   }
 
   ngOnInit(): void {
@@ -30,6 +31,7 @@ export class ListarVotosComponent implements OnInit {
     this.votacionesApiService.getListaVotos()
         .subscribe( data => {
           this.votos = data;
+          this.loading = false;
       } );
   }
 

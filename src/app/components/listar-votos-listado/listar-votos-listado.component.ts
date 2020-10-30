@@ -11,6 +11,7 @@ import { StorageService } from '../../services/storage.service';
 export class ListarVotosListadoComponent implements OnInit {
   
   @Input() votos:IVoto[] = [];
+  @Input() loading:boolean;
 
   paginacionConfig:IPaginacion = {
     itemsPerPage: 4,
