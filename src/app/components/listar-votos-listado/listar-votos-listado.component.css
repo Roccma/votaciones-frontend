@@ -1,0 +1,15 @@
+.listar-votos-listado-container {
+    width: 50%;
+    box-sizing: border-box;
+    margin: 5% auto;
+}
+
+.cantidad-mostrar-container {
+    width: 40%;
+    display: inline-block;
+}
+
+#cantidad-mostrar-select {
+    display: inline-block;
+    width: auto;
+}

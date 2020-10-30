@@ -14,7 +14,6 @@ export class MasVotadosListadoComponent implements OnInit {
     itemsPerPage: 4,
     currentPage: 1
   };
-  
 
   constructor() { }
 

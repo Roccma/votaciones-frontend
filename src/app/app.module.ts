@@ -25,6 +25,12 @@ import { RouterModule } from '@angular/router';
 import { DocumentoPipe } from './pipes/documento.pipe';
 import { MasVotadosListadoComponent } from './components/mas-votados-listado/mas-votados-listado.component';
 import { VotosPostulanteCardComponent } from './components/votos-postulante-card/votos-postulante-card.component';
+import { ListarVotosListadoComponent } from './components/listar-votos-listado/listar-votos-listado.component';
+import { VotoCardComponent } from './components/voto-card/voto-card.component';
+import { GanadoresActualesComponent } from './components/ganadores-actuales/ganadores-actuales.component';
+import { VotoDetalleModalComponent } from './components/voto-detalle-modal/voto-detalle-modal.component';
+import { SexoPipe } from './pipes/sexo.pipe';
+import { EsPostulantePipe } from './pipes/es-postulante.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +48,13 @@ import { VotosPostulanteCardComponent } from './components/votos-postulante-card
     AutenticacionModalComponent,
     DocumentoPipe,
     MasVotadosListadoComponent,
-    VotosPostulanteCardComponent
+    VotosPostulanteCardComponent,
+    ListarVotosListadoComponent,
+    VotoCardComponent,
+    GanadoresActualesComponent,
+    VotoDetalleModalComponent,
+    SexoPipe,
+    EsPostulantePipe
   ],
   imports: [
     BrowserModule,

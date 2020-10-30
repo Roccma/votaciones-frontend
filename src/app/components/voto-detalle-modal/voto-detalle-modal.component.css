@@ -1,0 +1,29 @@
+.close {
+    outline: 0;
+}
+
+.datos-votante-container {
+    margin-top: 25px;
+}
+
+.datos-votante-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.color-primary {
+    color: #007bff;
+}
+
+.datos-votante-table {
+    width: 100%;
+}
+
+.datos-votante-table tr td {
+    width: 50%;
+}
+
+.datos-votante-campo {
+    font-weight: bold;
+    padding-top: 10px;
+}

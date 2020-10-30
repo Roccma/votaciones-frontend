@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AutenticacionModalComponent implements OnInit {
   
-  
-
   title:string = "Autenticación";
 
   constructor() { }

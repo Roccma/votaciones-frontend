@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 import { IEntidad } from '../interfaces/IEntidad';
+import { IVoto } from '../interfaces/IVoto';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StorageService {
+  
+  public votoSeleccionado:IVoto = null;
 
   constructor() { }
 
@@ -19,6 +22,15 @@ export class StorageService {
   
   desloguear(){
     localStorage.removeItem('usuario');
+  }
+
+  setVotoSeleccionado( voto:IVoto ){
+    localStorage.setItem('voto', JSON.stringify( voto ));
+  }
+
+  getVotoSeleccionado(){
+    let voto = localStorage.getItem('voto');
+    return JSON.parse(voto);
   }
 
 }

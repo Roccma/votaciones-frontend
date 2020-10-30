@@ -1,0 +1,12 @@
+<div class="alert alert-info" role="alert" *ngIf="ganadores && ganadores.length > 0; else loadingContent">
+    <h5 class="alert-heading">Resultados actuales</h5>
+    <hr/>
+    <p *ngIf="ganadores.length == 1 && votos > 0">Hasta el momento, el/la ganador/a de la votación es <span class="ganadores">{{ ganadores[0].nombre + " " + ganadores[0].apellido }}</span>, con una cantidad de <b>{{ votos }} votos</b></p>
+    <p *ngIf="ganadores.length > 1 && votos > 0">Hasta el momento hay un empate entre
+        <span class="ganadores" *ngFor="let ganador of ganadores; let i = index">{{ ganador.nombre + " " + ganador.apellido }}<span *ngIf="i < ganadores.length - 1">,&nbsp;</span></span>, con una cantidad de <b>{{ votos }} votos</b>
+    </p>
+    <p *ngIf="votos == 0">Aún no se han emitido votos</p>
+</div>
+<ng-template #loadingContent>
+    <ngx-skeleton margin="5% auto" width="50%" borderRadius="15px" height="135px"></ngx-skeleton>
+</ng-template>

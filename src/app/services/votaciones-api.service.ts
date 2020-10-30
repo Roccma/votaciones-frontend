@@ -58,4 +58,18 @@ export class VotacionesApiService {
     return this.http.get( url )
       .pipe( map( ( data: any ) => data['postulantes'] ) );
   }
+
+  getListaVotos(){
+    let url = `${ environment.api_base_url }/votos/listar`;
+
+    return this.http.get( url )
+      .pipe( map( ( data: any ) => data['votos'] ) );
+  }
+
+  getDetalleVoto( id: number ){
+    let url = `${ environment.api_base_url }/votos/detalle/${ id } `;
+
+    return this.http.get( url )
+      .pipe( map( ( data: any ) => data['voto'] ) );
+  }
 }

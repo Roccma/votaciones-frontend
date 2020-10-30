@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api_base_url: 'https://votaciones-api.herokuapp.com/index.php'
+  api_base_url: 'http://localhost:8081/votaciones-backend/index.php'
 };
 
 /*

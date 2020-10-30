@@ -12,11 +12,8 @@ export class MasVotadosComponent implements OnInit {
 
   ranking:IEntidad[] = [];
 
-  inProgress:boolean;
-
   constructor( private votacionesApiService: VotacionesApiService,
               private notiflixService: NotiflixService ) { 
-     this.inProgress = true;           
   }
 
   ngOnInit(): void {
@@ -24,7 +21,6 @@ export class MasVotadosComponent implements OnInit {
     this.votacionesApiService.getRanking()
       .subscribe( data => {
         this.ranking = data;
-        this.inProgress = false;
       } );
 
   }

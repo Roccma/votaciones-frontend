@@ -1,0 +1,12 @@
+<div class="voto-card">
+    <div class="voto-icon-container">
+        <i class="fa fa-vote-yea"></i>
+    </div>
+    <div class="voto-informacion-container">
+        <label><span class = "voto-persona">{{ voto.nombre_votante + " " + voto.apellido_votante }}</span> votó a <span class = "voto-persona">{{ voto.nombre_postulante + " " + voto.apellido_postulante }}</span></label>
+        <label class="acclaration-text">{{ voto.fecha | date:"dd/MM/yyyy" }}</label>
+    </div>
+    <div class="voto-detalle-container">
+        <a (click)="verDetalle( voto.id )"><i class="fa fa-info-circle"></i></a>
+    </div>
+</div>
