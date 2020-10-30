@@ -11,38 +11,36 @@
                 <i class="fa fa-vote-yea"></i>&nbsp;&nbsp;Efectuado el día <b>{{ storageService.votoSeleccionado.fecha | date:'dd/MM/yyyy' }}</b> a favor de <b>{{ storageService.votoSeleccionado.nombre_postulante + " " + storageService.votoSeleccionado.apellido_postulante }}</b>
                 <div class="datos-votante-container">
                     <label class="datos-votante-title color-primary"><i class="fa fa-user"></i>&nbsp;&nbsp;Datos del votante</label>
-                    <table class="datos-votante-table">
-                        <tr>
-                            <td class="datos-votante-campo">Nombre completo</td>
-                            <td class="datos-votante-campo">Documento</td>
-                        </tr>
-                        <tr>
-                            <td>{{ storageService.votoSeleccionado.nombre_votante + " " + storageService.votoSeleccionado.apellido_votante }}</td>
-                            <td>{{ storageService.votoSeleccionado.documento_votante | documento }}</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="datos-votante-campo">Dirección</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">{{ storageService.votoSeleccionado.direccion_votante }}</td>
-                        </tr>
-                        <tr>
-                            <td class="datos-votante-campo">Teléfono</td>
-                            <td class="datos-votante-campo">Fecha de nacimiento</td>
-                        </tr>
-                        <tr>
-                            <td>{{ storageService.votoSeleccionado.telefono_votante }}</td>
-                            <td>{{ storageService.votoSeleccionado.dob_votante | date:'dd/MM/yyyy' }}</td>
-                        </tr>
-                        <tr>
-                            <td class="datos-votante-campo">Sexo</td>
-                            <td class="datos-votante-campo">¿Es postulante?</td>
-                        </tr>
-                        <tr>
-                            <td>{{ storageService.votoSeleccionado.sexo_votante | sexo }}</td>
-                            <td>{{ storageService.votoSeleccionado.es_postulante_votante | esPostulante }}</td>
-                        </tr>
-                    </table>
+                    <div class="row">
+                        <div class="col datos-votante-campo">Nombre completo</div>
+                        <div class="col datos-votante-campo">Documento</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">{{ storageService.votoSeleccionado.nombre_votante + " " + storageService.votoSeleccionado.apellido_votante }}</div>
+                        <div class="col">{{ storageService.votoSeleccionado.documento_votante | documento }}</div>
+                    </div>
+                    <div class="row">
+                        <div colspan="2" class="col datos-votante-campo">Dirección</div>
+                    </div>
+                    <div class="row">
+                        <div class="col" colspan="2">{{ storageService.votoSeleccionado.direccion_votante }}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col datos-votante-campo">Teléfono</div>
+                        <div class="col datos-votante-campo">Fecha de nacimiento</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">{{ storageService.votoSeleccionado.telefono_votante }}</div>
+                        <div class="col">{{ storageService.votoSeleccionado.dob_votante | date:'dd/MM/yyyy' }}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col datos-votante-campo">Sexo</div>
+                        <div class="col datos-votante-campo">¿Es postulante?</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">{{ storageService.votoSeleccionado.sexo_votante | sexo }}</div>
+                        <div class="col">{{ storageService.votoSeleccionado.es_postulante_votante | esPostulante }}</div>
+                    </div>
                 </div>
             </div>
         </div>

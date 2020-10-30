@@ -1,5 +1,5 @@
 export interface IEntidad{
-    id: number;
+    id?: number;
     documento: string;
     nombre: string;
     apellido: string;
@@ -7,6 +7,7 @@ export interface IEntidad{
     telefono: string;
     dob: string;
     sexo: string;
+    email?: string;
     votos?: number;
     es_postulante?: boolean;
     clave?: string;

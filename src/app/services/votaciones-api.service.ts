@@ -38,7 +38,12 @@ export class VotacionesApiService {
       id_entidad_postulante: idPostulante
     } );
 
-    return this.http.post(url, body);
+    
+    let headers:HttpHeaders = new HttpHeaders({
+      'Content-Type' : 'application/json'
+    });
+
+    return this.http.post(url, body, { headers });
   }
 
   login( email: string, clave: string ){
@@ -49,7 +54,12 @@ export class VotacionesApiService {
       clave
     } );
 
-    return this.http.post(url, body).toPromise();
+    
+    let headers:HttpHeaders = new HttpHeaders({
+      'Content-Type' : 'application/json'
+    });
+
+    return this.http.post(url, body, { headers }).toPromise();
   }
 
   getRanking(){
@@ -71,5 +81,34 @@ export class VotacionesApiService {
 
     return this.http.get( url )
       .pipe( map( ( data: any ) => data['voto'] ) );
+  }
+
+  cambiarClave( id: number, clave: string ){
+    let url = `${ environment.api_base_url }/usuarios/clave`;
+    
+
+    let body = JSON.stringify( {
+      id,
+      clave
+    } );
+
+    let headers:HttpHeaders = new HttpHeaders({
+      'Content-Type' : 'application/json'
+    });
+
+    return this.http.put(url, body, { headers }).toPromise();
+  }
+
+  agregarEntidad( entidad:IEntidad ){
+    let url = `${ environment.api_base_url }/perfiles/nuevo`;
+
+    let body = JSON.stringify( entidad );
+  
+    let headers:HttpHeaders = new HttpHeaders({
+      'Content-Type' : 'application/json'
+    });
+
+    return this.http.post(url, body, { headers })
+      .pipe( map( data => data['code'] ) );
   }
 }

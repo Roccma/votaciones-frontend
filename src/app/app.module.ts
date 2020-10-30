@@ -31,6 +31,8 @@ import { GanadoresActualesComponent } from './components/ganadores-actuales/gana
 import { VotoDetalleModalComponent } from './components/voto-detalle-modal/voto-detalle-modal.component';
 import { SexoPipe } from './pipes/sexo.pipe';
 import { EsPostulantePipe } from './pipes/es-postulante.pipe';
+import { ModificarClaveFormComponent } from './components/modificar-clave-form/modificar-clave-form.component';
+import { NuevaEntidadFormComponent } from './components/nueva-entidad-form/nueva-entidad-form.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { EsPostulantePipe } from './pipes/es-postulante.pipe';
     GanadoresActualesComponent,
     VotoDetalleModalComponent,
     SexoPipe,
-    EsPostulantePipe
+    EsPostulantePipe,
+    ModificarClaveFormComponent,
+    NuevaEntidadFormComponent
   ],
   imports: [
     BrowserModule,

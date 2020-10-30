@@ -51,12 +51,12 @@ export class AutenticacionFormComponent implements OnInit {
   controlar( autenticacionForm:NgForm ): boolean{
     if( autenticacionForm.form.controls.email.errors && 
       autenticacionForm.form.controls.email.errors['required'] ){
-      this.notiflixService.showAlert("El documento no puede estar vacío", "warning");
+      this.notiflixService.showAlert("No se ha indicado el correo electrónico", "warning");
       return false;
     }
     if( autenticacionForm.form.controls.contrasenia.errors && 
       autenticacionForm.form.controls.contrasenia.errors['required'] ){
-      this.notiflixService.showAlert("La contraseña no puede estar vacía", "warning");
+      this.notiflixService.showAlert("No se ha indicado contraseña", "warning");
       return false;
     }
 

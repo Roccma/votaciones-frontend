@@ -67,12 +67,12 @@ export class VotacionFormComponent implements OnInit {
   controlar( votoForm:NgForm ){
     if( votoForm.form.controls.documento.errors && 
       votoForm.form.controls.documento.errors['required'] ){
-      this.notiflixService.showAlert("El documento no puede estar vacío", "warning");
+      this.notiflixService.showAlert("No se ha indicado documento", "warning");
       this.notiflixService.hideLoading();
       return false;
     }
     if( votoForm.form.value.documento.length < 8 ){
-      this.notiflixService.showAlert("El documento ingresado es inválido", "warning");
+      this.notiflixService.showAlert("El documento ingresado no es válido", "warning");
       this.notiflixService.hideLoading();
       return false;
     }

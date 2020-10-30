@@ -1,0 +1,81 @@
+<form (ngSubmit)="agregarEntidad( nuevaEntidadForm )" #nuevaEntidadForm="ngForm">
+    <div class="row">
+        <div class="col">
+            <p class="col-form-label">Documento <span class="required-field">*</span></p>
+        </div>
+        <div class="col">
+            <p class="col-form-label">Tipo de Perfil</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" required name="documento" [ngModel]="entidad.documento" class="form-control" maxlength="8">
+        </div>
+        <div class="col">
+            <div class="form-check" *ngFor="let tipo of tipos">
+                <input class="form-check-input" type="radio" name="es_postulante" [id]="tipo.id" [value]="tipo.value" [ngModel]="entidad.es_postulante">
+                <label class="form-check-label" [for]="tipo.id">
+                  {{ tipo.text }}
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <p class="col-form-label">Nombre <span class="required-field">*</span></p>
+        </div>
+        <div class="col">
+            <p class="col-form-label">Apellido <span class="required-field">*</span></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" required name="nombre" [ngModel]="entidad.nombre" class="form-control">
+        </div>
+        <div class="col">
+            <input type="text" required name="apellido" [ngModel]="entidad.apellido" class="form-control">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <p class="col-form-label">Dirección <span class="required-field">*</span></p>
+        </div>
+        <div class="col">
+            <p class="col-form-label">Teléfono <span class="required-field">*</span></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" required name="direccion" [ngModel]="entidad.direccion" class="form-control">
+        </div>
+        <div class="col">
+            <input type="text" required name="telefono" [ngModel]="entidad.telefono" class="form-control">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <p class="col-form-label">Fecha de nacimiento <span class="required-field">*</span></p>
+        </div>
+        <div class="col">
+            <p class="col-form-label">Sexo</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="date" required name="dob" [ngModel]="entidad.dob" class="form-control">
+        </div>
+        <div class="col">
+            <div class="form-check" *ngFor="let sexo of sexos">
+                <input class="form-check-input" type="radio" name="sexo" [id]="sexo.value" [value]="sexo.value" [ngModel]="entidad.sexo">
+                <label class="form-check-label" [for]="sexo.value">
+                  {{ sexo.text }}
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5 pl-3 pr-3">
+        <button type="submit" class="btn btn-outline-primary btn-block">
+            Aceptar
+        </button>
+    </div>
+</form>
