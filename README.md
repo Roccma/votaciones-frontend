@@ -4,9 +4,9 @@ El proyecto contiene el frontend de un sistema para gestión de votos. En este, 
 
 ## Pre-requisitos
 
-- El proyecto es generado con Angular CLI versión 10.2.0. Por lo que se lo debe obtener desde el siguiente link: [Angular CLI](https://github.com/angular/angular-cli).
+- El proyecto es generado con Angular CLI versión 10.2.0. Por lo que se lo debe obtener desde el siguiente link: [Angular CLI](https://cli.angular.io/).
 
-- También es necesario tener instalado npm, para la instalación de paquetes externos. Para esto, instalar Node.JS desde aquí: [Nodejs][https://nodejs.org/es/]
+- También es necesario tener instalado npm, para la instalación de paquetes externos. Para esto, instalar Node.JS desde aquí: [Nodejs](https://nodejs.org/es/)
 
 ## Instalacióm
 
